@@ -8,7 +8,7 @@ Copyright (c) 2012 Reactive Apps, Ronnie Garcia
 $uploadDir = '/uploads/';
 
 // Set the allowed file extensions
-$fileTypes = array('jpg', 'jpeg', 'gif', 'png'); // Allowed file extensions
+$fileTypes = array('jpg', 'jpeg', 'gif', 'png', 'zip', 'rar'); // Allowed file extensions
 
 $verifyToken = md5('unique_salt' . $_POST['timestamp']);
 
@@ -28,7 +28,7 @@ if (!empty($_FILES) && $_POST['token'] == $verifyToken) {
 	} else {
 
 		// The file type wasn't allowed
-		echo 'Invalid file type.';
+		echo 'Dosya tipi uygun değil.';
 
 	}
 }
